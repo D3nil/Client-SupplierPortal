@@ -1,3 +1,4 @@
+import { CreateTempFornitoreComponent } from './create-temp-fornitore/create-temp-fornitore.component';
 import { NgModule } from '@angular/core';
 import {RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
@@ -7,7 +8,8 @@ const routes : Routes =
 [       
         {path:'', redirectTo : '/tempFornitoreComponent', pathMatch: 'full'},
         {path:'appComponent' , component: AppComponent},
-        {path:'tempFornitoreComponent', component: TempFornitoreComponent}
+        {path:'tempFornitoreComponent', component: TempFornitoreComponent},
+        {path:'createTempFornitoreComponent', component: CreateTempFornitoreComponent}
 ];
 
 @NgModule({
