@@ -1,0 +1,308 @@
+<!-- <hr>
+<h1 class="text-center">registrazione</h1>
+
+<hr>
+<div class="container ">
+  <form>
+
+    <div class="form-group row ">
+      <label for="example-text-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>Ragione Sociale</label>
+      <div class="col-6">
+        <input class="form-control" formControlName="r_D_Sociale" type="text" id="ragione_sociale" name="ragione_sociale" formControlName="r_D_Sociale">
+        <div *ngIf="supplierForm.get('r_D_Sociale').errors && supplierForm.get('r_D_Sociale').dirty">
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('r_D_Sociale').hasError('required')">Field is required</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('r_D_Sociale').hasError('minlength')">Min of 5 characters</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('r_D_Sociale').hasError('maxlength')">Max of 10 characters</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-search-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>sede Legale</label>
+      <div class="col-6">(Via - numero - cap - città)
+        <input type="text" class="form-control" id="sede_legale" formControlName="sede_Legale" name="sede_legale">
+
+        <div *ngIf="supplierForm.get('sede_Legale').errors && supplierForm.get('sede_Legale').dirty">
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Legale').hasError('required')">Field is required</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Legale').hasError('minlength')">Min of 5 characters</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Legale').hasError('maxlength')">Max of 10 characters</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>sede Operativa</label>
+      <div class="col-6">(Via - numero - cap - città)
+        <input class="form-control" type="text" formControlName="sede_Operativa" name="sede_operativa" id="sede_operativa">
+        <div *ngIf="supplierForm.get('sede_Operativa').errors && supplierForm.get('sede_Operativa').dirty">
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Operativa').hasError('required')">Field is required</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Operativa').hasError('minlength')">Min of 5 characters</div>
+          <div class="alert alert-danger" role="alert" ion-text *ngIf="supplierForm.get('sede_Operativa').hasError('maxlength')">Max of 10 characters</div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>telefono</label>
+      <div class="col-6">
+        <input class="form-control" type="text" formControlName="telefono" name="telefono" id="telefono">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-tel-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>fax</label>
+      <div class="col-6">
+        <input class="form-control" type="text" formControlName="fax" name="fax" id="fax">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-password-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>e_mail</label>
+      <div class="col-6">
+        <input class="form-control" type="text" formControlName="e_mail" name="e_mail" id="e_mail">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-number-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>data di Inizio</label>
+      <div class="col-6">
+        <input class="form-control" type="date" formControlName="data_inizio" name="data" id="data">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-datetime-local-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>Codice FISCALE</label>
+      <div class="col-6">
+        <input class="form-control" type="text" formControlName="cod_fisc" name="cod_fiscale" id="cod_fiscale">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-date-input" class="col-4 text-right col-form-label">
+        <span class="req">*</span>partita IVA
+      </label>
+      <div class="col-6">
+        <input class="form-control" type="text" formControlName="p_iva" name="p_iva" id="p_iva">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="select" class="col-4 text-right col-form-label">Tipo di fornitore</label>
+      <div class="col-6">
+        <select id="select" class="form-control"  formControlName="tipoFornitore">              
+          <option *ngFor = "let t of ListatipoFornitore" 
+          [value] = "t"> {{t}} 
+        </option>
+      </select>
+    </div>
+       </div> -->
+
+<!-- <div class="form-group row">
+      <div  class="form-check-inline col-3 offset-4">
+        <input class="form-check-input " type="radio" formControlName="tipoFornitore" value="Partita IVA" (change)="activate(supplierForm.controls['tipoFornitore'].value)">
+        <label class="text-right col-4 col-form-label">
+          <span class="req">* Libero Professionista </span>
+        </label>
+      </div>
+       <div class="form-check-inline col-3 offset-1">
+          <input class="form-check-input " type="radio" formControlName="tipoFornitore" value="SOCIETÀ" (change)="activate(supplierForm.controls['tipoFornitore'].value)">
+          <label class="text-right col-2  col-form-label">
+            <span class="req">* Societ&agrave; con dipendenti</span>
+          </label>
+        </div>
+    </div> -->
+
+<!--   <div *ngIf="supplierForm.controls['tipoFornitore'].value=='Partita IVA'">
+      <div formGroupName="partitaIvaDocs" class="docsArea">
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Questionario firmato</label>
+          <input type="file" class="col-6" formControlName="questionario">
+        </div>
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Documento d'identità</label>
+          <input type="file" class="col-6" formControlName="docIdentità">
+        </div>
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Curriculum Vitae</label>
+          <input type="file" class="col-6" formControlName="curriculum">
+        </div>
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Fotografia</label>
+          <input type="file" class="col-6" formControlName="foto">
+        </div>
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Visura Camerale</label>
+          <input type="file" class="col-6" formControlName="visuraCamerale">
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="supplierForm.controls['tipoFornitore'].value == 'Società'">
+
+      <div formGroupName="societaDocs" class="docsArea">
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Questionario firmato</label>
+          <input type="file" class="col-6" formControlName="questionario">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Visura Camerale</label>
+          <input type="file" class="col-6" formControlName="visuraCamerale">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">UNI EN - ISO 9001</label>
+          <input type="file" class="col-6" formControlName="iso9001">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Polizza RCT/RCO</label>
+          <input type="file" class="col-6" formControlName="polizzaRctRco">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">DURC</label>
+          <input type="file" class="col-6" formControlName="durc">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Ultimo bilancio disponibile</label>
+          <input type="file" class="col-6" formControlName="bilancio">
+        </div>
+      </div>
+    </div> -->
+<!-- <div *ngIf="!isValid" class="alert alert-danger" role="alert">
+      </div> -->
+<!--  <div class="form-group row">
+      <div class="col-6 offset-4">
+          <button type="submit"  [disabled] = "!supplierForm.valid" class="btn btn-primary">Submit</button>
+      </div>
+    </div>
+  </form>
+</div> -->
+<h3>Create New SUPPLIER
+</h3>
+<div class="container">
+  <form [formGroup]="supplierForm" (submit)="onFormSubmit(supplierForm)">
+    <p>RAGIONE SOCIALE :</p>
+    <input formControlName="r_D_Sociale" type="text">
+    <p>SEDE LEGALE :</p>
+    <input formControlName="sede_Legale" type="text">
+    <p>SEDE OPERATIVA:</p>
+    <input formControlName="sede_Operativa" type="text">
+    <p>TELEFONO :</p>
+    <input formControlName="telefono" type="text">
+    <p>FAX :</p>
+    <input formControlName="fax" type="text">
+    <p>E-MAIL :</p>
+    <input formControlName="e_mail" type="text">
+    <p>DATA DI INIZIO :</p>
+    <input formControlName="data_inizio" type="date">
+    <p> CODICE FISCALE :</p>
+    <input formControlName="cod_fisc" type="text">
+    <p>PARTITA IVA :</p>
+    <input formControlName="p_iva" type="text">
+    <br>
+    <p>TIPO FORNITORE :</p>
+    <select formControlName="tipoFornitore" (change)="addDOCUMENTbyTipo($event.target.value)">
+      <option *ngFor="let t of ListatipoFornitore" [value]="t">
+        {{ t }}
+      </option>
+    </select>
+
+    <br>
+
+     <div *ngIf="tipoFornitore.value == 'PARTITA IVA' "> 
+
+      <div [formGroup]="ritorna()">
+
+          <div class="form-group row">
+            <label class="col-4 text-right col-form-label">questionario</label>
+            <input type="file" class="col-6" formControlName="questionario"> 
+          </div> 
+          <div class="form-group row">
+            <label class="col-4 text-right col-form-label">docIdentità</label>
+            <input type="file" class="col-6" formControlName="docIdentità"> 
+          </div> 
+          <div class="form-group row">
+            <label class="col-4 text-right col-form-label">curriculum</label>
+            <input type="file" class="col-6" formControlName="curriculum"> 
+          </div> 
+          <div class="form-group row">
+            <label class="col-4 text-right col-form-label">foto</label>
+            <input type="file" class="col-6" formControlName="foto"> 
+          </div> 
+          <div class="form-group row">
+            <label class="col-4 text-right col-form-label">visuraCamerale</label>
+            <input type="file" class="col-6" formControlName="visuraCamerale"> 
+          </div> 
+      </div> 
+</div> 
+
+<div *ngIf="tipoFornitore.value == 'SOCIETA' "> 
+
+    <div [formGroup]="ritorna()">
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">questionario</label>
+          <input type="file" class="col-6" formControlName="questionario"> 
+        </div> 
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">visuraCamerale</label>
+          <input type="file" class="col-6" formControlName="visuraCamerale"> 
+        </div> 
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">iso9001</label>
+          <input type="file" class="col-6" formControlName="iso9001"> 
+        </div> 
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">polizzaRctRco</label>
+          <input type="file" class="col-6" formControlName="polizzaRctRco"> 
+        </div> 
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">durc</label>
+          <input type="file" class="col-6" formControlName="durc"> 
+        </div> 
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">bilancio</label>
+          <input type="file" class="col-6" formControlName="bilancio"> 
+        </div> 
+      </div> 
+    </div>
+    <button type="submit" class="btn btn-success">SUBMIT</button>
+</form>
+</div>
+  <!--
+    <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Visura Camerale</label>
+          <input type="file" class="col-6" formControlName="visuraCamerale">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">UNI EN - ISO 9001</label>
+          <input type="file" class="col-6" formControlName="iso9001">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Polizza RCT/RCO</label>
+          <input type="file" class="col-6" formControlName="polizzaRctRco">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">DURC</label>
+          <input type="file" class="col-6" formControlName="durc">
+        </div>
+
+        <div class="form-group row">
+          <label class="col-4 text-right col-form-label">Ultimo bilancio disponibile</label>
+          <input type="file" class="col-6" formControlName="bilancio">
+        </div>
+      </div> -->
+     
+    <!--  <button (click)="dele(i)">Delete</button> -->
+    <!--  <button type="button" class="btn btn-dark"(click)="resetFORM()"> Reset </button> -->
+  
+
+
+<!--  Value: {{supplierForm.value| json}} -->
